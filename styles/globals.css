@@ -1,16 +1,36 @@
+:root {
+    --bg: #ffffff;
+    --fr: black;
+    --main: #21b6a8;
+    --mainDark: #1e998d;
+}
+body {
+    background-color: var(--bg);
+    color: var(--fr);
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: var(--main);
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+.floatRight {
+    float: right;
+}
+.navItems {
+    padding: 0.4vw;
+    font-size: 2rem;
+    margin: 1vw auto;
+}
+.navItems:hover {
+    color: var(--mainDark);
 }
