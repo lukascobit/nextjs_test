@@ -1,7 +1,10 @@
 
 function about() {
     return (
-        <div>about</div>
+        <>
+            <title>about</title>
+            <div>about </div>
+        </>
     )
 }
 

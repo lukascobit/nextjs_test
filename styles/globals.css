@@ -1,8 +1,9 @@
 :root {
-    --bg: #ffffff;
-    --fr: black;
-    --main: #21b6a8;
+    --bg: #28292a;
+    --fr: #cfcecb;
+    --main: #158a7e;
     --mainDark: #1e998d;
+    --mainLight: #b6d6d3;
 }
 body {
     background-color: var(--bg);
@@ -23,6 +24,13 @@ a {
 * {
     box-sizing: border-box;
 }
+button {
+    background-color: var(--main);
+    cursor: pointer;
+    font-size: 2.5em;
+    border: none;
+    border-radius: 1vw;
+}
 .floatRight {
     float: right;
 }
@@ -30,7 +38,24 @@ a {
     padding: 0.4vw;
     font-size: 2rem;
     margin: 1vw auto;
+    color: var(--fr);
 }
 .navItems:hover {
-    color: var(--mainDark);
+    color: var(--mainLight);
+}
+.post {
+    background-color: var(--mainLight);
+    border-radius: 2vw;
+    padding: 1vw;
+    margin: 0.3vh;
+}
+.nav {
+    background-color: var(--mainDark);
+}
+.headerText {
+    color: var(--fr);
+    font-size: 2rem;
+}
+.post {
+    background-color: var(--mainDark);
 }

@@ -1,14 +1,14 @@
-import navStyles from "../styles/Nav.module.css"
+import Link from "next/link"
 
 function Nav() {
     return (
-        <nav className={navStyles.nav}>
-            <a className={navStyles.headerText} href="/">Homefeeder</a>
+        <nav className="nav">
+            <Link className="headerText" href="/">Homefeeder</Link>
 
             <div className="floatRight">
-                <a className="navItems" href="/about">About</a>
-                <a className="navItems" href="/game">Game</a>
-                <a className="navItems" href="data">Data</a>
+                <Link className="navItems" href="/about">About </Link>
+                <Link className="navItems" href="/game">Game </Link>
+                <Link className="navItems" href="data">Data </Link>
 
             </div>
         </nav>
