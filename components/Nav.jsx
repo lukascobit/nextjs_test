@@ -5,7 +5,7 @@ function Nav() {
         <nav className="nav">
             <Link className="headerText" href="/">Homefeeder</Link>
 
-            <div className="floatRight">
+            <div className="floatRight navItems">
                 <Link className="navItems" href="/about">About </Link>
                 <Link className="navItems" href="/game">Game </Link>
                 <Link className="navItems" href="data">Data </Link>

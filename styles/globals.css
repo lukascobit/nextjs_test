@@ -9,15 +9,14 @@ body {
     background-color: var(--bg);
     color: var(--fr);
 }
-
 html,
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
     text-decoration: none;
+    color: inherit;
 }
 * {
     box-sizing: border-box;
@@ -25,7 +24,6 @@ a {
 button {
     background-color: var(--main);
     cursor: pointer;
-    font-size: 2.5em;
     border: none;
     border-radius: 1vw;
 }
@@ -33,9 +31,7 @@ button {
     float: right;
 }
 .navItems {
-    padding: 0.4vw;
-    font-size: 5rem;
-    margin: 1vw auto;
+    margin: 0vw auto;
     color: var(--fr);
 }
 .navItems:hover {
@@ -48,12 +44,12 @@ button {
     margin: 0.3vh;
 }
 .nav {
-    background-color: var(--mainDark);
-}
-.headerText {
-    color: var(--fr);
     font-size: 2rem;
+    background-color: var(--mainDark);
 }
 .post {
     background-color: var(--mainDark);
+}
+.goBack {
+    font-size: 3rem;
 }

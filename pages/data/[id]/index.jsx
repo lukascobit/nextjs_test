@@ -1,16 +1,16 @@
 import React from 'react'
-import { useRouter } from "next/router"
 import Link from 'next/link';
+import Meta from '../../../components/Meta';
+
+
+const domain = process.env.DOMAIN
 
 function Post({ data }) {
-    const router = useRouter()
-    const { id } = router.query
 
-    console.log(data);
     return (
         <div className='post'>
-            <Link href="/data"><button>&larr;</button></Link>
-            <h1>{id}</h1>
+            <Meta title={data.title}></Meta>
+            <Link href="/data"><button className='goBack'>&larr;</button></Link>
             <h1>{data.title}</h1>
             <h2>{data.body}</h2>
         </div>
@@ -19,20 +19,22 @@ function Post({ data }) {
 
 export default Post;
 
-
 export const getStaticProps = async (context) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`)
+    const res = await fetch(`${domain}/api/posts/${context.params.id}`)
+
     const data = await res.json()
+
     return {
         props: {
-            data
-        }
+            data,
+        },
     }
-
 }
 
+
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+
+    const res = await fetch(`${domain}/api/posts`)
     const data = await res.json()
 
 

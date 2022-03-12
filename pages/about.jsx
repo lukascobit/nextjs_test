@@ -1,8 +1,9 @@
+import Meta from "../components/Meta"
 
 function about() {
     return (
         <>
-            <title>about</title>
+            <Meta title="about" />
             <div>about </div>
         </>
     )

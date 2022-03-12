@@ -6,12 +6,7 @@ function game() {
         <>
             <h1>Game</h1>
 
-
-
         </>
-
-
-
 
     )
 }

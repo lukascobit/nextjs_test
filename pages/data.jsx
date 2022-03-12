@@ -1,11 +1,13 @@
-import Link from "next/link";
+import Link from "next/link"
+import Meta from "../components/Meta"
 
+const domain = process.env.DOMAIN
 
 function data({ data }) {
 
     return (
         <>
-            <title>data</title>
+            <Meta title="posts"></Meta>
             <h1>data </h1>
             {data.map(d => {
                 return (
@@ -27,7 +29,7 @@ function data({ data }) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const res = await fetch(`${domain}/api/posts`);
     const data = await res.json()
     return {
         props: {
