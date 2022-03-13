@@ -8,7 +8,7 @@ function Nav() {
             <div className="floatRight navItems">
                 <Link className="navItems" href="/about">About </Link>
                 <Link className="navItems" href="/game">Game </Link>
-                <Link className="navItems" href="data">Data </Link>
+                <Link className="navItems" href="/data">Data </Link>
 
             </div>
         </nav>

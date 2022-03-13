@@ -26,6 +26,13 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 1vw;
+    font-size: 2rem;
+}
+input {
+    font-size: 2rem;
+}
+form {
+    margin: 2vw;
 }
 .floatRight {
     float: right;
@@ -49,7 +56,11 @@ button {
 }
 .post {
     background-color: var(--mainDark);
+    width: 20%;
 }
 .goBack {
     font-size: 3rem;
+}
+.bigButton {
+    font-size: 10rem;
 }
