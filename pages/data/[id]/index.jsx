@@ -7,13 +7,14 @@ const domain = process.env.DOMAIN
 
 function Post({ data }) {
 
+    data = data[0];
     return (
         <div className='post'>
             <Meta title={data.title}></Meta>
             <Link href="/data"><button className='goBack'>&larr;</button></Link>
-            <p>{d.id}</p>
-            <h6>{d.datum}</h6>
-            <h2>{d.todo}</h2>
+            <p>{data.id}</p>
+            <h6>{data.datum}</h6>
+            <h2>{data.todo}</h2>
         </div>
     )
 }
@@ -21,13 +22,13 @@ function Post({ data }) {
 export default Post;
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`${domain}/todo/${context.params.id}`)
+    const res = await fetch(`${domain}todo/${context.params.id}`)
 
     const data = await res.json()
 
     return {
         props: {
-            data,
+            data
         },
     }
 }
@@ -35,7 +36,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
 
-    const res = await fetch(`${domain}/todo/`)
+    const res = await fetch(`${domain}todo/`)
     const data = await res.json()
 
 

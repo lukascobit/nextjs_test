@@ -56,11 +56,17 @@ form {
 }
 .post {
     background-color: var(--mainDark);
-    width: 20%;
+    width: 100%;
 }
 .goBack {
     font-size: 3rem;
 }
 .bigButton {
     font-size: 10rem;
+}
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    grid-auto-rows: minmax(100px, auto);
 }
