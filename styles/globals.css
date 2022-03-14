@@ -3,6 +3,7 @@
     --fr: #cfcecb;
     --main: #158a7e;
     --mainDark: #1e998d;
+    --mainDarker: rgb(25, 119, 110);
     --mainLight: #b6d6d3;
 }
 body {
@@ -25,8 +26,8 @@ button {
     background-color: var(--main);
     cursor: pointer;
     border: none;
-    border-radius: 1vw;
-    font-size: 2rem;
+    border-radius: 0.1vw;
+    font-size: 2.2rem;
 }
 input {
     font-size: 2rem;
@@ -38,17 +39,28 @@ form {
     float: right;
 }
 .navItems {
-    margin: 0vw auto;
+    cursor: pointer;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.navItem {
+    display: inline-block;
+    margin: 0vw 0.2vw;
     color: var(--fr);
 }
-.navItems:hover {
+.navItem:hover {
     color: var(--mainLight);
 }
 .post {
-    background-color: var(--mainLight);
+    background-color: var(--mainDarker) !important;
     border-radius: 2vw;
     padding: 1vw;
     margin: 0.3vh;
+}
+.post:hover {
+    background-color: var(--main) !important;
+    cursor: pointer;
 }
 .nav {
     font-size: 2rem;
