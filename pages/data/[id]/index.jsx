@@ -2,8 +2,9 @@ import React from 'react'
 import Link from 'next/link';
 import Meta from '../../../components/Meta';
 
+const dev = process.env.NODE_ENV !== "production";
+const domain = dev ? "http://localhost:4000/" : "https://nextjs-test-backend.herokuapp.com/";
 
-const domain = process.env.DOMAIN
 
 function Post({ data }) {
 

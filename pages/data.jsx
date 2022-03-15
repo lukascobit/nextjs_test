@@ -63,6 +63,7 @@ function data({ jsonData }) {
                                 <p>{d.id}</p>
                                 <h6>{d.datum}</h6>
                                 <h2>{d.todo}</h2>
+                                <button>Edit</button>
                             </div>
                         </Link>
                     );
